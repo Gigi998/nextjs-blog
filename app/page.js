@@ -2,10 +2,16 @@ import { getSortedPostData } from '../lib/posts';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Date from './components/date';
-
+// import { headers } from 'next/headers';
 // Static
 export default function Home() {
   const allPostsData = getSortedPostData();
+
+  // IF WE USE HEADERS, PAGE IS NO LONGER STATIC, IT BECOMES SERVER
+  // const headersList = headers();
+  // const domain = headersList.get('host');
+  // const path = headersList.get('referer');
+  // console.log(`Domain is ${path.slice(-1)}`);
 
   return (
     <div>

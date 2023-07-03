@@ -1,6 +1,7 @@
 import './globals.css';
 import styles from './layout.module.css';
 import Profile from './components/Profile';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,6 +16,12 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body>
         <div className={styles.container}>
+          <nav className='flex'>
+            <Link href='/' className='mr-5'>
+              Home
+            </Link>
+            <Link href='/count'>Counter</Link>
+          </nav>
           <Profile name={name}>{children}</Profile>
         </div>
       </body>
