@@ -2,6 +2,7 @@ import { getSortedPostData } from '../lib/posts';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Date from './components/date';
+
 // import { headers } from 'next/headers';
 // Static
 export default function Home() {
